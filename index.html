@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!-- Added the viewport because the page wasn't showing up on my phone, basically just shrinking the full size website and not using the responsive styles.  Also I like using icons since they are scalable and I linked to the google hosted jquery library.  I also downloaded normalize and included -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Ken Crocken</title>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+  <link href="normalize.css" rel="stylesheet">  
+  <link href="styles.css" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+
+<body>
+<!-- Masthead with contact info -->
+  <header>
+      <img src="http://www.gravatar.com/avatar/83fb4a35e52381397d9c07d9e25b4c05?s=200" />
+      <h1>Ken Crocken</h1>
+      <h2>Recovering Attorney | Aspiring Digital Humanist</h2>
+      <ul class="contact">
+        <li><i class="fa fa-globe"></i> <a href="http://goo.gl/maps/hM6yB">Laurel, Maryland</a></li>
+        <li><i class="fa fa-phone"></i> <a href="tel:+1 (443) 802-7145">(443) 802-7145</a></li>
+        <li><i class="fa fa-envelope"></i> <a href="mailto:kcrocken@gmail.com">kcrocken@gmail.com</a></li>
+      </ul>
+      <ul class="social">
+        <li class="linkedin"><a href="http://www.linkedin.com/pub/kenneth-crocken/17/914/aaa"><i class="fa fa-linkedin-square"></i></a></li>
+        <li class="googleplus"><a href="http://plus.google.com/104867203056603798573"><i class="fa fa-google-plus-square"></a></i>
+        </li>
+        <li class="twitter"><a href="http://twitter.com/kencrocken"><i class="fa fa-twitter-square"></i></a></li>
+      </ul>
+  </header>
+
+<!-- Main body with the text -->
+  <article>
+      <p class="rocket"><i class="fa fa-rocket"></i></p>
+      <p><strong>To what comes next!</strong> The one question everyone every philosophy major has to answer after graduation -  What comes next?  Perhaps not the most creative or unique answer, I decided on law school - fairly ordinary, and on its face, not a bad decision.  Its a decision that I would make again - law school was an amazing experience.  However, after law school, what comes next?  
+      </p>
+      <p class="gavel"><i class="fa fa-gavel"></i></p>
+      <p><strong>Well I did write that paper.</strong> Right after law school was the 14th Bled E-Commerce Conference, held -appropriately enough - in Bled, Slovenia.  A paper I wrote for a class was accepted into the graduate student symposium.  It had a fancy title, "The Language of Mistrust:  A Review of the Laws and Industry Self Regulation of Third Party Network Advertisers."  It was about banner ads, click trails and personally identifiable information - but for some trademark work, this was the crowning acheivement of my tech law career.  Soon, the dot coms went dot bust and those trademark applications dried up along with  my job.  So, I fell into litigation and trial work - not really where I wanted to be, but I thought I could make it work.
+      </p>
+      <p class="code"><i class="fa fa-code"></i></p> 
+      <p><strong>Some say the language of the future is Mandarin, I say its code.</strong> Perhaps if I spent more time on traditional advertising and not so much tweaking the code of my website and researching SEO techniques to get my website to top of Google.  Or maybe, if I didn't focus so much on clients who didn't pay?  Who knows - but I do know what I was doing was dealing with failures in human interaction, more often than not because of language.  Anyhow, long story short - I am not doing what I envisioned with my law practice, its a job not a career.  I told this to someone and they told me I should learn a language, not a bad idea.
+      </p>
+      <p class="beer"><i class="fa fa-beer"></i></p> 
+      <p><strong>I'm not a beer snob.</strong> If the above doesn't make any sense, have a couple beers. I had a Chimay Triple recently - very good; if given the choice, I would probably grab a Fat Tire - its still a belgian - but I won't say no to a cold Miller Lite.  Everything has a time and place.  I guess this is why autumn seasonals are not made year round.
+      </p>
+  </article>
+
+<!-- Footer with the link back to top and umbrella icon -->
+  <footer>
+    <p class="top"><a href="#top"><i class="fa fa-chevron-circle-up"></a></i></p>
+    <p><i class="fa fa-umbrella"></i></p>
+  </footer>
+
+<!-- I wanted to include a little jquery that I learned from Dash.  The scrolltop was something I have been looking at.  Dash really helped explain what was going on with the script, though I am still not entirely sure why the Return false is needed (other than without the statement the scrolling is not as smooth) -->
+  <script>
+    $("a[href='#top']").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+    });
+  </script>
+
+</body>
