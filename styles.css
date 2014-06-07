@@ -2,7 +2,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
-  max-width: 700px;
   background: #232323;
 }
 h1 {
@@ -16,13 +15,16 @@ h2 {
   margin: 0px 0 21px 0;
 }
 a{
-  text-decoration: none;
-}
-a {
+  transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+
   color: #FF0000;
 }
 a:hover {
   color: #CC0000;
+    text-decoration: none;
 }
 a:active {
   color:#DD1122;
@@ -32,18 +34,41 @@ ul {
   padding: 0;
 }
 /*--Header Styles--*/
+
 header{
-  padding: 25px 0;
-  margin-bottom: 35px;
   text-align: center;
-  font-family: 'Open Sans Condensed', sans-serif;;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-shadow: 2px 2px 3px rgba(0,0,0,.9);
+  height: 500px;
+  padding: 150px 0 0 0;
+
+
 }
-img {
-  border-radius: 50%;
-  border: 5px solid #4682B4;
-  float: left;
-  margin-top: 18px;
+
+.background-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width:100%;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(5px);
+
+  -webkit-filter: blur(7px);
+  -moz-filter: blur(7px);
+  -o-filter: blur(7px);
+  -ms-filter: blur(7px);
+  z-index: -2;
 }
+.background-overlay{
+  background: rgba(0,0,0,.7);
+  height: 100%;
+  width:100%;
+
+}
+
+
 /*--Contact Info Styles--*/
 .contact li{
   display: inline;
@@ -60,10 +85,11 @@ img {
   font-size: 32px;
 }
 .social a{
-  transition: color 0.7s ease;
-  -webkit-transition: color 0.7s ease;
-  -moz-transition: color 0.7s ease;
-  -o-transition: color 0.7s ease;
+  transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  text-shadow: none;
 }
 .linkedin a{
   color: rgba(0,123,182,.4);
@@ -74,6 +100,9 @@ img {
 .twitter a{
   color: rgba(64,153,255,.4);
 }
+.linkedin a:hover, .googleplus a:hover, .twitter a:hover{
+  text-shadow: 2px 2px 3px rgba(0,0,0,.9);
+}
 .linkedin a:hover{
   color: rgba(0,123,182,1);
 }
@@ -83,15 +112,27 @@ img {
 .twitter a:hover{
   color: rgba(64,153,255,1);
 }
+section {
+  padding-bottom: 100px;
+  border-top: 7px solid #000;
+  margin: 0 auto;
+}
+img {
+  border-radius: 50%;
+  display: block;
+  margin: -100px auto 0 auto;
+  border: 5px solid #000;
+}
+
 /*--Main Body--*/
 article{
   color: white;
-  padding-left: 50px;
 }
 .rocket, .gavel, .code, .beer{
   text-align: center;
   font-size: 55px;
-  margin:0;
+  margin: 0;
+  padding: 15px 0;
 }
 .rocket{
   color: #3399FF;
@@ -111,7 +152,6 @@ article p{
 }
 /*--Footer Styles--*/
 footer{
-  padding-left: 50px;
   text-align: center;
   color: rgba(255,255,255,.1);
 }
@@ -131,9 +171,7 @@ footer{
     font-size: 20px;
     margin: 20px 0 21px 0;
   }
-  img {
-    float: none;
-  }
+
   .contact li{
   display: block;
   }
